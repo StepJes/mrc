@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e6b"/>
+      <stop offset="100%" style="stop-color:#3d5291"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#e8c84a"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="600" fill="url(#bg)"/>
+  
+  <!-- Cross -->
+  <g transform="translate(250, 220)">
+    <rect x="-8" y="-100" width="16" height="200" fill="url(#gold)"/>
+    <rect x="-60" y="-70" width="120" height="16" fill="url(#gold)"/>
+    <!-- Lord's Prayer text -->
+    <text x="0" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffffff" opacity="0.7">"Where there is love in the</text>
+    <text x="0" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffffff" opacity="0.7">heart, there is joy in the</text>
+    <text x="0" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffffff" opacity="0.7">home." - Rev. William Taylor</text>
+  </g>
+  
+  <text x="250" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#c9a227" letter-spacing="2">REV. WILLIAM TAYLOR</text>
+  <text x="250" y="555" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#ffffff" opacity="0.8" letter-spacing="1">FOUNDER OF BOMBAY METHODISM</text>
+</svg>

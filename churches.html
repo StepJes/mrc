@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Church Directory — Mumbai Regional Conference</title>
+  <meta name="description" content="Find a Methodist church in Mumbai, Pune, Nagpur, or Nanded — 36 congregations across 7 districts." />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="header-top">
+    <div class="container">
+      <span>Mumbai Regional Conference · Methodist Church in India</span>
+      <span>Est. 1893</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header">
+    <div class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/logo.jpg" alt="MRC Logo" />
+          <div class="logo-text">
+            <h1>Mumbai Regional Conference</h1>
+            <span>Methodist Church in India</span>
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">Heritage</a>
+          <a href="churches.html" class="active">Churches</a>
+          <a href="leadership.html">Leadership</a>
+          <a href="education.html">Education</a>
+        </nav>
+        <div class="menu-toggle" aria-label="Toggle navigation" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header has-bg">
+    <div class="page-header-bg">
+      <img src="assets/images/bowen-memorial-church.jpg" alt="Church exterior" />
+    </div>
+    <div class="container">
+      <span class="section-subtitle">Our Congregations</span>
+      <h1>Church Directory</h1>
+      <p>36 Methodist congregations across Mumbai, Pune, Nagpur, and Nanded — united in worship, diverse in language, rooted in heritage.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Churches</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIRECTORY SECTION ===== -->
+  <section class="section-padding bg-white">
+    <div class="container">
+
+      <!-- Search + Filters -->
+      <div class="directory-search">
+        <input type="text" id="churchSearch" class="directory-search-input" placeholder="Search by church name or address..." />
+        <select id="districtFilter" class="directory-search-select">
+          <option value="all">All Districts</option>
+          <option value="south-mumbai">South Mumbai (6)</option>
+          <option value="north-mumbai">North Mumbai (6)</option>
+          <option value="thane">Thane (5)</option>
+          <option value="navi-mumbai">Navi Mumbai (2)</option>
+          <option value="pune">Pune (14)</option>
+          <option value="nagpur">Nagpur (2)</option>
+          <option value="nanded">Nanded (1)</option>
+        </select>
+      </div>
+
+      <!-- Language Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Languages</button>
+        <button class="filter-tab" data-filter="english">English</button>
+        <button class="filter-tab" data-filter="tamil">Tamil</button>
+        <button class="filter-tab" data-filter="marathi">Marathi</button>
+        <button class="filter-tab" data-filter="kannada">Kannada</button>
+        <button class="filter-tab" data-filter="gujarati">Gujarati</button>
+        <button class="filter-tab" data-filter="hindi">Hindi</button>
+      </div>
+
+      <!-- Count -->
+      <div style="text-align: center; margin-bottom: var(--spacing-md);">
+        <span id="churchCount" style="color: var(--mid-gray); font-size: 0.88rem;">36 churches</span>
+      </div>
+
+      <!-- Church Grid (rendered by JS) -->
+      <div class="churches-grid" id="churchesGrid"></div>
+      <div class="churches-empty" id="churchesEmpty" style="display:none;">
+        No churches match your current filters. Try adjusting your search.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DISTRICT OVERVIEW ===== -->
+  <section class="section-padding" style="background: var(--ivory);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">By District</span>
+        <h2>Our Districts at a Glance</h2>
+        <div class="brass-line centered"></div>
+      </div>
+      <div class="features-grid three-col">
+        <div class="feature-card fade-in">
+          <h3>South Bombay</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">6 churches · Rev. Lionel Hector, District Superintendent</p>
+          <p>The historic heart of Mumbai Methodism — Bowen Memorial (1889), Taylor Memorial, and four more congregations in Byculla, Colaba, Madanpura, Parel, Grant Road, and Matunga.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <h3>North Mumbai</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">6 churches · Rev. Anand Methry, District Superintendent</p>
+          <p>Growing communities from Goregaon to Mira Road — serving Tamil, English, and Kannada-speaking congregations across the northern suburbs.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <h3>Pune District</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">14 churches · Rev. Dr. S. Retnamony, District Superintendent</p>
+          <p>The largest district by number of congregations — including the historic Oldham Memorial (1877) and four language congregations at Kirkee/Khadki.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <h3>Thane</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">5 churches</p>
+          <p>Marathi, Tamil, English, and Kannada congregations serving the growing Thane-Kalyan-Ambernath corridor.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <h3>Navi Mumbai</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">2 churches</p>
+          <p>Epworth Tamil and Epworth English — twin congregations in Nerul serving the planned city's diverse community.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <h3>Nagpur & Nanded</h3>
+          <p style="color: var(--brass-dark); font-weight: 600; margin-bottom: 0.3rem;">3 churches</p>
+          <p>Two congregations at Mecosabagh, Nagpur (Hindi and Marathi) and one in Vazirabad, Nanded — extending the MRC's reach into Maharashtra's heartland.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP SECTION ===== -->
+  <section class="map-section section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Locations</span>
+        <h2>Find a Church Near You</h2>
+        <div class="brass-line centered"></div>
+      </div>
+      <div class="map-container">
+        <div class="map-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+          <p style="font-size: 1.1rem; color: var(--warm-gray);">Click "View Map" on any church card above to see its location on Google Maps.</p>
+          <p style="font-size: 0.88rem; color: var(--mid-gray); margin-top: 0.5rem;">Or use "Directions" to navigate directly to the church.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Mumbai Regional Conference</h3>
+          <p>Methodist Church in India — preserving and sharing the heritage of Methodism across Mumbai, Pune, Nagpur, and beyond since 1856.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">Heritage</a></li>
+            <li><a href="churches.html">Church Directory</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="education.html">Education</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Hymns & Liturgy</a></li>
+            <li><a href="#">Prayer Guide</a></li>
+            <li><a href="#">Conference Documents</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li>Mumbai Regional Conference</li>
+            <li>Methodist Church in India</li>
+            <li style="margin-top: 0.8rem;">© 2026 MRC — MCI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Mumbai Regional Conference — Methodist Church in India. All rights reserved.</p>
+        <p style="font-family: var(--font-accent); color: var(--brass-light); font-size: 0.8rem;">The heritage of our fathers, the mission of our children.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MAP MODAL ===== -->
+  <div class="map-modal" id="mapModal">
+    <div class="map-modal-content">
+      <div class="map-modal-header">
+        <h3 id="mapModalTitle">Church Location</h3>
+        <button id="mapModalClose" class="map-modal-close">&times;</button>
+      </div>
+      <iframe id="mapModalFrame" class="map-modal-iframe" allowfullscreen loading="lazy"></iframe>
+      <div class="map-modal-footer">
+        <a id="mapModalDirections" href="#" target="_blank" rel="noopener" class="btn btn-brass">Open in Google Maps</a>
+        <button onclick="document.getElementById('mapModal').classList.remove('active');document.getElementById('mapModalFrame').src='';document.body.style.overflow='';" class="btn btn-outline">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/churches.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

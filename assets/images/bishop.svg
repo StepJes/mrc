@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2744"/>
+      <stop offset="100%" style="stop-color:#3d5291"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a227"/>
+      <stop offset="100%" style="stop-color:#e8c84a"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="500" fill="url(#bg)"/>
+  
+  <!-- Decorative halo -->
+  <circle cx="250" cy="210" r="110" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.3"/>
+  <circle cx="250" cy="210" r="95" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Simple bishop figure -->
+  <g transform="translate(250, 200)">
+    <!-- Mitre (bishop's hat) -->
+    <path d="M-30,-40 L0,-90 L30,-40 Z" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    <circle cx="0" cy="-45" r="4" fill="url(#gold)"/>
+    <line x1="-15" y1="-35" x2="15" y2="-35" stroke="url(#gold)" stroke-width="2"/>
+    
+    <!-- Head -->
+    <circle cx="0" cy="-5" r="25" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    
+    <!-- Body / Robe -->
+    <path d="M-45,80 L-40,30 Q-35,15 0,15 Q35,15 40,30 L45,80 Z" fill="none" stroke="url(#gold)" stroke-width="3"/>
+    
+    <!-- Cross on chest -->
+    <line x1="0" y1="20" x2="0" y2="60" stroke="url(#gold)" stroke-width="2"/>
+    <line x1="-8" y1="32" x2="8" y2="32" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+  
+  <text x="250" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#c9a227" letter-spacing="2">BISHOP DR. NEWTON M. PARMAR</text>
+  <text x="250" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#ffffff" opacity="0.8" letter-spacing="1">Episcopal & Resident Bishop</text>
+  <text x="250" y="455" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#ffffff" opacity="0.6" letter-spacing="1">Mumbai Regional Conference</text>
+</svg>
