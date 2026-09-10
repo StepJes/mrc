@@ -300,7 +300,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
   opacity: 1;
 }
 .hero-carousel .hero-slide img {
-  transform-origin: left center;
+  transform-origin: center center;
   will-change: transform;
 }
 .hero-carousel .hero-slide.active img {
