@@ -1380,12 +1380,13 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.3rem); }
     transition: none;
   }
   .hero-editorial { flex-direction: column; }
-  .hero-editorial-image { position: relative; width: 100%; height: 52vh; }
   .hero-editorial-panel {
     width: 100%;
     flex: 1;
-    padding: var(--spacing-lg) var(--spacing-md);
-    background: linear-gradient(180deg, rgba(28,12,18,0.92) 0%, rgba(28,12,18,0.96) 100%);
+    min-height: 100vh;
+    justify-content: flex-end;
+    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(180deg, rgba(28,12,18,0.15) 0%, rgba(28,12,18,0.4) 45%, rgba(28,12,18,0.88) 75%, rgba(28,12,18,0.96) 100%);
   }
   .hero-editorial-panel::before { display: none; }
   .about-preview { grid-template-columns: 1fr; }
